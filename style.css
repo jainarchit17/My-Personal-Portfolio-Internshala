@@ -1,0 +1,519 @@
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+#logo {
+  font-family: "Science Gothic";
+}
+.links {
+  margin: 0.5rem;
+  color: #1f232d;
+  justify-content: space-between;
+}
+.links:hover {
+  color: orange;
+}
+#menu-icon {
+  font-size: 3.6rem;
+  color: black;
+  display: none;
+}
+.mode {
+  color: black;
+  border: 1px sollid black;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+#home {
+  background-color: beige;
+  min-height: 80vh;
+  color: #1f232d;
+  width: 100%;
+  padding-left: 0.5rem;
+  font-family: "Fira Sans";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social {
+  margin: 3rem 0rem 3rem 0.1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+.social-btn {
+  font-size: 2rem;
+  color: orange;
+}
+.social-btn:hover {
+  transition: 1s ease;
+  text-shadow: 1px 1px 0.1rem black;
+}
+.btn {
+  color: black;
+  font-weight: 700;
+  background-color: orange;
+  padding: 1rem 2rem;
+  height: 1rem;
+  border: 0.1rem solid orange;
+  border-radius: 2rem;
+  box-shadow: 0rem 0rem 0.5rem 0.1rem orange;
+}
+.btn:hover {
+  background: transparent;
+  color: orange;
+  box-shadow: none;
+  transition: 1s ease;
+}
+#home img {
+  width: 20vh;
+  border-radius: 5rem;
+  box-shadow: 0rem 0rem 0.8rem 0.1rem orange;
+  margin-right: 1rem;
+  animation: heroImg 4s linear 1s infinite;
+}
+@keyframes heroImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* About Section */
+.about {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #1f232d;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.about-img img {
+  height: 40vh;
+  width: 25vw;
+  border-radius: 1rem;
+}
+
+.heading {
+  font-family: "Fira Sans";
+  text-align: center;
+  font-size: 2rem;
+}
+
+.heading span {
+  color: orange;
+  text-align: center;
+  font-family: "Fira Sans";
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 1.2rem;
+  font-family: "Fira Sans";
+}
+
+.about-content p {
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 2rem 0 3rem;
+}
+
+#skill {
+  background-color: beige;
+  min-height: 70vh;
+  color: #1f232d;
+  width: 100%;
+  font-family: "Fira Sans";
+}
+.skills .heading {
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+.skill-container {
+  background-color: rgb(225, 225, 200);
+  border-radius: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.8rem;
+}
+.skill-box .title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.skill-bar {
+  height: 1.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: gray;
+}
+.skill-fill {
+  height: 100%;
+  border-radius: 1rem;
+  background-color: orange;
+  position: relative;
+  display: block;
+  animation: fillOut 2s linear 1s;
+}
+
+.skill-fill.html {
+  width: 80%;
+}
+.skill-fill.css {
+  width: 75%;
+}
+.skill-fill.js {
+  width: 30%;
+}
+.skill-fill.python {
+  width: 40%;
+}
+@keyframes fillOut {
+  from {
+    width: 0%;
+  }
+}
+
+.percent {
+  position: absolute;
+  right: -0.5rem;
+  top: -1.2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid orange;
+  border-radius: 0.3rem;
+  background-color: orange;
+  padding: 1px;
+}
+#certificates {
+  width: 100%;
+  min-height: 80vh;
+}
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin: 1%;
+}
+.certi-box {
+  flex: 1 1 30rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #e3d1ae;
+}
+.certi-head {
+  font-family: "Fira Sans";
+  margin: 1rem auto;
+}
+#certificates .heading {
+  padding: 1rem;
+}
+.certi-box p {
+  margin: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+.certi-box:hover {
+  background: transparent;
+  border: 2px solid orange;
+  box-shadow: 0 0 0.8rem 0.1rem orange;
+  transform: scale(1.02);
+  transition: 500ms ease;
+}
+/* Projects Section */
+#projects {
+  background-color: beige;
+  min-height: 70vh;
+  color: #1f232d;
+  width: 100%;
+  font-family: "Fira Sans";
+  margin-top: 2rem;
+}
+#projects .heading {
+  padding: 1rem;
+}
+.project-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 1rem;
+}
+.project-box {
+  position: relative;
+  display: flex;
+  border: 1px solid cadetblue;
+  box-shadow: 0 0 0.5rem cadetblue;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.project-box img {
+  width: 100%;
+  min-height: 200px;
+  background-color: #fff;
+  transition: 0.5s ease;
+}
+.project-box:hover img {
+  transform: scale(1.1);
+}
+.project-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+  background: linear-gradient(rgba(54, 113, 177, 0.33)) rgba(255, 166, 0, 0.808);
+}
+.project-box:hover .project-desc {
+  transform: translateY(0);
+}
+.project-desc h4 {
+  font-size: 1.2rem;
+}
+.project-desc p {
+  font-size: 0.8rem;
+}
+.project-desc a i {
+  font-size: 1.5rem;
+  color: white;
+}
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: black;
+  background: white;
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  border-radius: 0.1rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2rem 9%;
+  background: gray;
+}
+
+.footer-text p {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  color: white;
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem beige;
+}
+
+.footer-iconTop a i {
+  font-size: 1.2rem;
+  color: white;
+}
+/* Responsiveness For Tablets (aprox 768px) */
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem .5rem;
+  }
+
+  section {
+    padding: 10rem 9% 2rem;
+  }
+
+  .services {
+    padding: 7rem 3% 2rem;
+  }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Mobile (approx 360px-450px) */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  .navbar {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 1rem;
+    background: white;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+  }
+
+  #menu-items {
+    position: absolute;top: 100%;
+  right: 0;
+
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+
+  display: none;
+}
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    position: relative;
+  }
+  .navbar:hover #menu-items {
+    display: block;
+}
+  .home {
+    flex-direction: column;
+  }
+
+  .home-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
